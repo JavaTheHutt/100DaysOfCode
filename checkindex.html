@@ -57,6 +57,22 @@
                   text-align: center;
                 }
 
+                .nameList {
+                  padding-left: 15%;
+                  padding-right: 15%;
+                  padding-top: 15%;
+                  padding-bottom: 15%;
+
+                  margin-top: 3%;
+                  margin-left: 5%;
+                  margin-right: 5%;
+                  margin-bottom: 5%;
+
+                  border-radius: 25px;
+                  background: rgba(117,117,117, 0.50);
+                  text-align: center;
+                }
+
               h1 {
                 font-family: Georgia, serif;
                 font-size: 80px;
@@ -78,9 +94,12 @@
               }
 
               #checkinform {
-                margin-left: 11%;
-                margin-right:11%;
+                margin-left: 10%;
+                margin-right:10%;
                 border-radius: 50%;
+                float: left;
+                height: 20px;
+                width: 300px;
               }
 </style>
 </head>
@@ -105,12 +124,14 @@
 </body>
 <br>
 
+<!-- Will decide which looks better.
 <div id="checkinform">
 <div class="input-group">
   <input type="text" class="form-control" aria-label="Text input with dropdown button">
   <div class="input-group-append">
     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
     <div class="dropdown-menu">
+
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
       <a class="dropdown-item" href="#">Something else here</a>
@@ -120,7 +141,61 @@
   </div>
 </div>
 </div>
+-->
 
+<div id="checkinform">
+<select class="custom-select">
+  <option selected>Select Employee</option>
+  <option value="1">Mark Johnson</option>
+  <option value="2">Mike Jones</option>
+  <option value="3">Austin Jackson</option>
+  <option value="4">George Washington</option>
+  <option value="5">John Adams</option>
+  <option value="6">Tanner Louis</option>
+  <option value="7">Kade Shane</option>
+  <option value="8">Victor Bellz</option>
+  <option value="9">Rusty Shackelford</option>
+  <option value="10">Tim Couch</option>
+</select>
+</div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Check In Employee
+</button>
+
+<!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Check in</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        (name) will be checked in at (time)
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Check in</button> <!-- add in close option when emp is checked in-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<body>
+  <div class="container">
+    <div class="nameList">
+      <h2><p> Employees </p></h2>
+        <p>
+
+        </p>
+    </div>
+  </div>
+</body>
 
 
 
